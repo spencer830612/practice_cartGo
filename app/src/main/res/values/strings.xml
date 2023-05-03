@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">心動動課程購物</string>
+    <string name="sVCargo">請輸入關鍵字</string>
+    <string name="tVClassCategoryColumn">課程分類：</string>
+    <string name="tvClassColumn">課程名稱：</string>
+    <string name="tVCoachColumn">教練：</string>
+    <string name="tVCostColumn">花費點數：</string>
+    <string name="tVStartColumn">開始時間：</string>
+    <string name="tVEndColumn">結束時間：</string>
+    <string name="tVCapacityColumn">人數上限：</string>
+    <string name="tVClassCommentColumn">課程備註：</string>
+    <string name="bTCancel">我不買</string>
+</resources>

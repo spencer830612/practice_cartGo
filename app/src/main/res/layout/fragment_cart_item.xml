@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--購物車首頁點卡片後進入的地方-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".controller.CartItemFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.application_05_04_card_revise.viewModel.CartItemViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="236dp"
+            android:layout_height="222dp"
+            android:layout_marginTop="24dp"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:src="@drawable/b001"
+            app:imageResource="@{viewModel.item.imageID}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tVCoachColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/tVCoachColumn"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/tVCoachDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.item.coachName}"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tVClassColumn"
+            app:layout_constraintTop_toTopOf="@+id/tVCoachColumn"
+            tools:text="田聖潔" />
+
+        <TextView
+            android:id="@+id/tVClassColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/tvClassColumn"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tVCoachColumn"
+            app:layout_constraintTop_toBottomOf="@+id/tVCoachDetail" />
+
+        <TextView
+            android:id="@+id/tVClassDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.item.className}"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tVClassColumn"
+            app:layout_constraintStart_toEndOf="@+id/tVClassColumn"
+            app:layout_constraintTop_toTopOf="@+id/tVClassColumn"
+            tools:text="口技大放送" />
+
+        <TextView
+            android:id="@+id/tVClassCategoryColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            android:text="@string/tVClassCategoryColumn"
+            app:layout_constraintStart_toStartOf="@+id/tVClassColumn"
+            app:layout_constraintTop_toBottomOf="@+id/tVClassDetail" />
+
+        <TextView
+            android:id="@+id/tVClasscategoryDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.item.classCategory}"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tVClassCategoryColumn"
+            app:layout_constraintStart_toEndOf="@+id/tVClassCategoryColumn"
+            app:layout_constraintTop_toTopOf="@+id/tVClassCategoryColumn"
+            tools:text="極限無氧" />
+
+        <TextView
+            android:id="@+id/tVCostColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            android:text="@string/tVCostColumn"
+            app:layout_constraintStart_toStartOf="@+id/tVClassCategoryColumn"
+            app:layout_constraintTop_toBottomOf="@+id/tVClasscategoryDetail" />
+
+        <TextView
+            android:id="@+id/tVCostDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.item.classCost}"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tVCostColumn"
+            app:layout_constraintStart_toEndOf="@+id/tVCostColumn"
+            app:layout_constraintTop_toTopOf="@+id/tVCostColumn"
+            tools:text="100000" />
+
+        <TextView
+            android:id="@+id/tVStartColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            android:text="@string/tVStartColumn"
+            app:layout_constraintStart_toStartOf="@+id/tVCostColumn"
+            app:layout_constraintTop_toBottomOf="@+id/tVCostDetail" />
+
+        <TextView
+            android:id="@+id/tVStartDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.item.classStart.toString()}"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tVStartColumn"
+            app:layout_constraintStart_toEndOf="@+id/tVStartColumn"
+            app:layout_constraintTop_toTopOf="@+id/tVStartColumn"
+            tools:text="你的生日" />
+
+        <TextView
+            android:id="@+id/tVEndColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            android:text="@string/tVEndColumn"
+            app:layout_constraintStart_toStartOf="@+id/tVStartColumn"
+            app:layout_constraintTop_toBottomOf="@+id/tVStartDetail" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.item.classEnd}"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tVEndColumn"
+            app:layout_constraintStart_toEndOf="@+id/tVEndColumn"
+            app:layout_constraintTop_toTopOf="@+id/tVEndColumn"
+            tools:text="我的生日" />
+
+       <TextView
+            android:id="@+id/tVCapacityColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+           android:textSize="18sp"
+            android:text="@string/tVCapacityColumn"
+            app:layout_constraintStart_toStartOf="@+id/tVEndColumn"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/tVCapacityDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.item.menCount}"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tVCapacityColumn"
+            app:layout_constraintStart_toEndOf="@+id/tVCapacityColumn"
+            app:layout_constraintTop_toTopOf="@+id/tVCapacityColumn"
+            tools:text="10000000" />
+
+        <TextView
+            android:id="@+id/tVClassCommentColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/tVClassCommentColumn"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tVCapacityColumn"
+            app:layout_constraintTop_toBottomOf="@+id/tVCapacityDetail" />
+
+        <TextView
+            android:id="@+id/tVClassCommentDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.item.classComment}"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tVClassCommentColumn"
+            app:layout_constraintTop_toTopOf="@+id/tVClassCommentColumn"
+            tools:text="你會上癮" />
+
+        <Button
+            android:id="@+id/BtCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/bTCancel"
+            app:layout_constraintEnd_toStartOf="@+id/tVClassCommentColumn"
+            app:layout_constraintTop_toBottomOf="@+id/tVCapacityColumn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
